@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>Automation</groupId>
+  <artifactId>FlightBooking3</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  
+  
+  <packaging>jar</packaging>
+
+  <name>FlightBooking</name>
+  <url>http://maven.apache.org</url>
+  <build>
+  <finalName>git-mav-jen-dock-integration</finalName>
+ <plugins>
+  <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0-M7</version>
+    <dependencies>
+      <dependency>
+        <groupId>org.apache.maven.surefire</groupId>
+        <artifactId>surefire-junit47</artifactId>
+        <version>3.0.0-M7</version>
+      </dependency>
+    </dependencies>
+  </plugin>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.1</version>
+        <configuration>
+          <verbose>true</verbose>
+          <fork>true</fork>
+          <executable>C:\Program Files\Java\jdk-13.0.2\bin\javac</executable>
+          <compilerVersion>1.8</compilerVersion>
+        </configuration>
+      </plugin>
+     
+      </plugins>
+       </build>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>7.5.0</version>
+</dependency>
+  <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>7.5.0</version>
+   
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-picocontainer</artifactId>
+    <version>7.5.0</version>
+</dependency>
+
+  
+  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.4.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+   
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.picocontainer/picocontainer -->
+<dependency>
+    <groupId>org.picocontainer</groupId>
+    <artifactId>picocontainer</artifactId>
+    <version>2.15</version>
+</dependency>
+
+
+  </dependencies>
+</project>
