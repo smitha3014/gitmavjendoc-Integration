@@ -1,15 +1,14 @@
 pipeline {
     agent any
      stages {
-        stage("Tools initialization") {
+        stage("maven version") {
             steps {
-                sh "mvn --version"
-                sh "java -version"
+               bat "mvn --version"
             }
         }
-        stage("Building test") {
+        stage("build test") {
             steps {
-               sh "mvn clean test"
+               bat "mvn clean test"
             }
         }
      }
