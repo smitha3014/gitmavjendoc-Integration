@@ -1,16 +1,20 @@
 pipeline {
     agent any
+    tools {
+        maven 'MAVEN_PATH'
+        jdk 'jdk8'
+    }
     stages {
-        stage(‘maven version’) {
+        stage("Tools initialization") {
             steps {
-                bat label: '', script: 'mvn --version'
-            }
-          }
-      
-        stage(‘execute build’) {
-            steps {
-                bat label: '', script: 'mvn clean test'
+                sh "mvn --version"
+                sh "java -version"
             }
         }
-    }
-}
+        stage("Building test") {
+            steps {
+               sh "mvn clean test"
+            }
+        }
+     }
+  }
