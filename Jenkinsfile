@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage(‘maven version’) {
             steps {
-                bat 'mvn --version'
+                bat label: '', script: 'mvn --version'
             }
           }
       
         stage(‘execute build’) {
             steps {
-                bat 'mvn clean test'
+                bat label: '', script: 'mvn clean test'
             }
         }
     }
