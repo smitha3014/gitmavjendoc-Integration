@@ -23,7 +23,7 @@
             <configuration>  
                 <archive>  
                     <manifest>  
-                        <mainClass>testrunner</mainClass>  
+                        <mainClass>/FlightBooking3/src/test/java/testrunner/Testrunner.java</mainClass>  
                     </manifest>  
                 </archive>  
             </configuration>  
